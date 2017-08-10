@@ -4,13 +4,14 @@ import java.util.ArrayList;
 
 import java.util.List;
 
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mx.springboot.model.Pending;
 
 @RestController
+@CrossOrigin
 public class PendingsController {
 
 	public List<Pending> listaPendientes() {
@@ -30,6 +31,7 @@ public class PendingsController {
 	}
 
 	@GetMapping("/lista-pendientes")
+	@CrossOrigin
 	public List<Pending> allPendings() {
 
 		return listaPendientes();
